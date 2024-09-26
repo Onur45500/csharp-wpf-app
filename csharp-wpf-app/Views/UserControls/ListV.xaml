@@ -23,6 +23,6 @@
         <Button Name="btnDelete" Grid.Row="0" Grid.Column="1" Width="100" Height="50" Content="Delete" FontSize="16" Click="btnDelete_Click" HorizontalAlignment="Center"></Button>
         <Button Name="btnClear" Grid.Row="0" Grid.Column="1" Width="100" Height="50" Content="Clear" FontSize="16" Click="btnClear_Click" HorizontalAlignment="Right"></Button>
 
-        <ListView Name="listV" Grid.Row="1" Grid.ColumnSpan="2" SelectionMode="Single"></ListView>
+        <ListView Name="listV" Grid.Row="1" Grid.ColumnSpan="2" SelectionMode="Multiple"></ListView>
     </Grid>
 </UserControl>

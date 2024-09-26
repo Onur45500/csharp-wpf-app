@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,12 +34,17 @@ namespace csharp_wpf_app.Views.UserControls
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            int index = listV.SelectedIndex;
-            var item = listV.SelectedItem;
-            var response = MessageBox.Show($"Do you want to delete the item {item}", "Sure ?", MessageBoxButton.YesNo);
+            //int index = listV.SelectedIndex;
+            var items = listV.SelectedItems;
+            var response = MessageBox.Show($"Do you want to delete {items.Count} items ?", "Sure ?", MessageBoxButton.YesNo);
 
             if (response == MessageBoxResult.Yes)
-                listV.Items.RemoveAt(index);
+            {
+                var itemsList = new ArrayList(items);
+                foreach (var item in itemsList)
+                    listV.Items.Remove(item);
+            }
+                
         }
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
