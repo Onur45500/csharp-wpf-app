@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using Microsoft.Win32;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Windows;
@@ -23,6 +24,5 @@ namespace csharp_wpf_app
             InitializeComponent();
         }
 
-        
     }
 }
