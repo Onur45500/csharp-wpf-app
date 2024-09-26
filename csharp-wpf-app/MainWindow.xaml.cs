@@ -19,6 +19,13 @@ namespace csharp_wpf_app
         public MainWindow()
         {
             InitializeComponent();
+
+            tbHello.Text = "Hello Onur";
+        }
+
+        private void btnClick_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
