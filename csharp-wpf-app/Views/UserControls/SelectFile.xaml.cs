@@ -1,18 +1,6 @@
-﻿using Microsoft.Win32;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace csharp_wpf_app.Views.UserControls
 {
@@ -28,7 +16,7 @@ namespace csharp_wpf_app.Views.UserControls
 
         private void btnFile_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog fileDialog = new OpenFileDialog();
+            Microsoft.Win32.OpenFileDialog fileDialog = new Microsoft.Win32.OpenFileDialog();
             //fileDialog.Filter = "C# Source Files | *.cs"; // That will allow us to filter the files that we can select, here only csharp files
             fileDialog.Title = "Please select a file..."; // That will set the title of the modal that is launch
             fileDialog.Multiselect = true; // That will enable to select multiple files

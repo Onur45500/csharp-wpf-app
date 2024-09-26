@@ -8,23 +8,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-
-        <Grid Grid.Column="1">
-            <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-            </Grid.RowDefinitions>
-
-            <Button Grid.Row="1" Name="btnFile" Width="100" Height="30" Content="Select A File" Click="btnFile_Click"></Button>
-            <TextBlock Grid.Row="2" Name="txtFile" TextAlignment="Center" VerticalAlignment="center"></TextBlock>
-        </Grid>
-
+        <userControl:SelectFolder/>
     </Grid>
 </Window>
