@@ -16,9 +16,13 @@ namespace csharp_wpf_app
     /// </summary>
     public partial class MainWindow : Window
     {
+        int counter = 0;
+
         public MainWindow()
         {
             InitializeComponent();
+
+           
         }
 
         private void toggleRun_Click(object sender, RoutedEventArgs e)
@@ -33,6 +37,12 @@ namespace csharp_wpf_app
                 toggleRun.Content = "Run";
                 tbStatus.Text = "Stopped";
             }
+        }
+
+        private void counterBtn_Click(object sender, RoutedEventArgs e)
+        {
+            counter++;
+            counterText.Text = counter.ToString();
         }
     }
 }
