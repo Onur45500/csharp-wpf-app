@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -36,9 +37,13 @@ namespace csharp_wpf_app
             set
             {
                 boundText = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BoundText"));
+                OnPropertyChanged();
             }
         }
 
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }
