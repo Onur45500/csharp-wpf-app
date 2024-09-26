@@ -5,12 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:csharp_wpf_app.Views.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="30" d:DesignWidth="30">
+             d:DesignHeight="30" d:DesignWidth="300">
     <Grid Background="white" Margin="5">
         <TextBox Name="txtInput" Background="Transparent" VerticalContentAlignment="Center"
                  FontSize="16" TextChanged="txtInput_TextChanged"></TextBox>
         
-        <TextBlock Name="tbPlaceholder" Panel.ZIndex="-1" Text="Hello"
+        <TextBlock Name="tbPlaceholder" Panel.ZIndex="-1" Text="{Binding Placeholder}"
                    VerticalAlignment="center" Margin="5 0 0 0" FontSize="16"
                    FontWeight="Light" Foreground="Gray" Background="Transparent"></TextBlock>
         

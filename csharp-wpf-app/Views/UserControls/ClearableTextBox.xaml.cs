@@ -25,6 +25,20 @@ namespace csharp_wpf_app.Views.UserControls
             InitializeComponent();
         }
 
+        private string placeholder;
+
+        public string Placeholder
+        {
+            get {
+                return placeholder;
+            }
+            set {
+                placeholder = value;
+                tbPlaceholder.Text = placeholder;
+            }
+        }
+
+
         private void btnClick_Click(object sender, RoutedEventArgs e)
         {
             txtInput.Clear();

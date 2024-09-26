@@ -8,35 +8,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
 
-        <userControl:MenuBar/>
+        <Grid Grid.Column="1" Background="Beige">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
 
-        <Grid Grid.Row="1" Height="auto">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-
-            <Grid Grid.Column="1" Margin="10">
-                <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
-
-                <userControl:ClearableTextBox Grid.Row="0"/>
-                <userControl:ClearableTextBox Grid.Row="1"/>
-                <userControl:ClearableTextBox Grid.Row="2"/>
-                <userControl:ClearableTextBox Grid.Row="3"/>
-                <userControl:ClearableTextBox Grid.Row="4"/>
-            </Grid>
+            <TextBox Name="txtToSet" Grid.Row="0" Width="200" Height="30" Text="{Binding BoundText}"></TextBox>
+            <Button Name="btnSet" Grid.Row="1" Margin="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Set" FontSize="16"></Button>
+            <TextBlock Name="tbSetted" Grid.Row="2" Text="{Binding BoundText}"></TextBlock>
         </Grid>
     </Grid>
 </Window>
