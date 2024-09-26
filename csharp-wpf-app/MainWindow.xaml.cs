@@ -22,5 +22,7 @@ namespace csharp_wpf_app
         {
             InitializeComponent();
         }
+
+        
     }
 }
