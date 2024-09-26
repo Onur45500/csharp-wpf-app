@@ -19,13 +19,20 @@ namespace csharp_wpf_app
         public MainWindow()
         {
             InitializeComponent();
-
-            tbHello.Text = "Hello Onur";
         }
 
-        private void btnClick_Click(object sender, RoutedEventArgs e)
+        private void toggleRun_Click(object sender, RoutedEventArgs e)
         {
-
+            if(toggleRun.Content == "Run")
+            {
+                toggleRun.Content = "Stop";
+                tbStatus.Text = "Running";
+            }
+            else
+            {
+                toggleRun.Content = "Run";
+                tbStatus.Text = "Stopped";
+            }
         }
     }
 }
