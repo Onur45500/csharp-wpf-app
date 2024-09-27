@@ -1,4 +1,8 @@
-﻿using System.Windows;
+﻿using csharp_wpf_app.Views.UserControls;
+using System.Collections;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Windows;
 
 namespace csharp_wpf_app
 {
