@@ -5,9 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:csharp_wpf_app"
         xmlns:userControl="clr-namespace:csharp_wpf_app.Views.UserControls"
-        mc:Ignorable="d"
+        mc:Ignorable="d" 
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
         Title="MainWindow" Height="450" Width="800">
+        <!--WindowStyle="None"-->
+
     <Grid>
-        <userControl:ScrollViewerExample/>
+        
     </Grid>
+    
 </Window>
