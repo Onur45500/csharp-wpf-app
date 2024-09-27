@@ -1,0 +1,34 @@
+﻿<Window x:Class="csharp_wpf_app.Views.Windows.ModalWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:csharp_wpf_app.Views.Windows"
+        mc:Ignorable="d"
+        Title="ModalWindow" Height="450" Width="500"
+        BorderBrush="Gray"
+        BorderThickness="2"
+        WindowStartupLocation="CenterOwner"
+        WindowStyle="None">
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0"></WindowChrome>
+    </WindowChrome.WindowChrome>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel>
+                <TextBox Name="txtModal" Width="150" Height="50" BorderBrush="Gray" BorderThickness="2" TextChanged="txtModal_TextChanged"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Name="btnOk" Height="30" Width="50" Content="OK" Margin="5" Click="btnOk_Click" IsEnabled="false"></Button>
+                <Button Name="btnCancel" Height="30" Width="50" Content="Cancel" Margin="5" Click="btnCancel_Click"></Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
